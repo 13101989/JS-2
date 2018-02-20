@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Rulzz</title>
+		<script>
+			console.log("=====2.01======");
+
+			var nr1=[1,2,3,4,-1,"a"]
+
+			function unu(arr){
+				return arr.length;
+			}
+			console.log(unu(nr1));
+
+			console.log("=====2.02======");
+
+			var nr2=[1,2,3,4,-1]
+
+			function doi(arr){
+			 	var max=-Infinity;
+			 	for(var i=0; i<arr.length; i++)
+			 		if (arr[i]>max){
+			 			max=arr[i];
+			 		}
+			 		return max;
+			 }
+			 console.log(doi(nr2));
+
+			 console.log("=====2.03======");
+
+			 var nr3=[1,2,3,4,-7]
+
+			 function trei(arr){
+			 	var min=+Infinity;
+			 	for(var i=0; i<arr.length; i++)
+			 		if (arr[i]<min){
+			 			min=arr[i];
+			 		}
+			 		return min;
+			 }
+			 console.log(trei(nr3));
+
+			 console.log("=====2.04======");
+
+			 var nr4=[1,2,3,'b',3,-4,'a']
+
+			 function patru(arr){
+			 	for(var i=0; i<arr.length; i++)
+			 		if (typeof arr[i] !== 'number'){
+			 			arr.splice(i,1);
+			 		}
+			 		return arr;
+			 }
+			 console.log(patru(nr4));
+
+			 console.log("=====2.05======");
+
+			  var nr5=[1,'f',3,'b',3,4,'a']
+
+			 function cinci(arr) {
+			 	for(var i=arr.length-1; i>=0; i--)
+			 		if (arr[i] === "a" || arr[i] === "b" || arr[i] === "c" || arr[i] === "d" || arr[i] === "e" || arr[i] === "f") {
+			 			arr[i]=arr[i];
+			 		}else{
+			 			arr.splice(i,1);
+			 		}
+			 		return arr;
+			 }
+			 console.log(cinci(nr5));
+
+
+			 console.log("=====2.06======");
+			 console.log("=====2.07======");
+
+			
+
+			 console.log("=====2.08======");
+
+			 var nr8=[1,'f','@',3,'b',3,'@',4,'a']
+
+			 function opt(arr) {
+			 	for(var i=0; i<=arr.length-1; i++)
+			 		if (arr[i] === "@") {
+			 			return i;
+			 		}
+			 		 }
+			 console.log(opt(nr8));
+
+			 console.log("=====2.09======");
+
+			 var nr9=[1,'f','@',3,'b',3,'@',4,'a']
+
+			 function noua(arr) {
+			 	for(var i=arr.length-1; i>=0; i--)
+			 		if (arr[i] === "@") {
+			 			return i;
+			 		}
+			 		 }
+			 console.log(noua(nr9));
+
+
+			 console.log("=====2.10======");
+			 console.log("=====2.11======");
+
+
+			 console.log("=====2.12======");
+
+			 function doisprezece(n) {
+				var rezultat;
+					if (n>0) {
+						rezultat = n*doisprezece(n-1);
+								}
+						else if (n==0) {
+							rezultat = 1;
+								}
+							else {
+								rezultat = null;
+								}
+						return(rezultat)
+						}
+
+			console.log(doisprezece(4));
+	
+			 console.log("=====2.13======");
+
+			 function treisprezece(x, y) {
+ 				 if ((typeof x !== 'number') || (typeof y !== 'number')) 
+   					 return false;
+ 				 		x = Math.abs(x);
+  						y = Math.abs(y);
+  					while(y) {
+   					 var t = y;
+   						y = x % y;
+    					x = t;
+  					}
+  						return x;
+					}
+			console.log(treisprezece(9,15));
+
+			console.log("=====2.14======");
+
+			function paisprezece(x, y) {
+  				 if ((typeof x !== 'number') || (typeof y !== 'number')) 
+  				  return false;
+  					return (!x || !y) ? 0 : Math.abs((x * y) / treisprezece(x, y));
+					}
+
+			console.log(paisprezece(9,15));
+
+			console.log("=====2.15======");
+
+			function cincisprezece(n) {
+  				 var arr = [];
+  				  	if (typeof n !== 'number')
+  				 		 return false;
+  				 	if (n === 0)
+  				 		return +Infinity;
+  					 for (var mod=1; mod<=n; mod++)
+  				 		if (n % mod === 0) {
+  				 			arr.push(mod);
+  				 	}	
+  				 return	arr; 
+		}
+
+			console.log(cincisprezece(25));
+
+			console.log("=====2.16======");
+			console.log("=====2.17======");
+
+			console.log("=====2.18======");
+
+			var nr18=[1,1,1]
+			var nr18bis=[0,0,'a']
+
+			function optsprezece(arr1, arr2) {
+  				 var total= [];
+  				 total=arr1.concat(arr2);
+  				 return	total; 
+  				}
+  			console.log(optsprezece(nr18,nr18bis));
+
+
+			console.log("=====2.19======");
+			console.log("=====2.20======");
+
+
+
+		</script>
+	</head>
+</html>
