@@ -5,10 +5,10 @@
 		<script>
 			console.log("=====2.01======");
 
-			var nr1=[1,2,3,4,-1,"a"]
+			var nr1="Ana are mere"
 
-			function unu(arr){
-				return arr.length;
+			function unu(string){
+				return string.length;
 			}
 			console.log(unu(nr1));
 
@@ -42,7 +42,7 @@
 
 			 console.log("=====2.04======");
 
-			 var nr4=[1,2,3,'b',3,-4,'a']
+			 var nr4=[1,2,3,'b',3,-4,'a', 15]
 
 			 function patru(arr){
 			 	for(var i=0; i<arr.length; i++)
@@ -59,9 +59,7 @@
 
 			 function cinci(arr) {
 			 	for(var i=arr.length-1; i>=0; i--)
-			 		if (arr[i] === "a" || arr[i] === "b" || arr[i] === "c" || arr[i] === "d" || arr[i] === "e" || arr[i] === "f") {
-			 			arr[i]=arr[i];
-			 		}else{
+			 		if (!(arr[i] >= 'a' && arr[i] <= 'f')){
 			 			arr.splice(i,1);
 			 		}
 			 		return arr;
@@ -70,7 +68,44 @@
 
 
 			 console.log("=====2.06======");
+
+			 var nr6 = "Ana are 66 mere.";
+
+			 function sase() {
+				var x = "";
+				for(var i=0; i<nr6.length; i++) {
+				if((nr6[i] >= 'a' && nr6[i] <= 'z' || nr6[i] >= 'A' && nr6[i] <= 'Z' )) {
+					x += nr6[i];	
+				}
+				 if (x.length === 5){
+						break;
+					}
+				}
+				return x;
+			}
+
+			console.log(sase(nr6));
+
+
+
 			 console.log("=====2.07======");
+
+			 var nr7 = "Ana are 66 de mere.";
+
+			 function sapte() {
+				var x = "";
+				for(var i=0; i<nr7.length; i++) {
+				if((nr7[i] >= 'a' && nr7[i] <= 'z' || nr7[i] >= 'A' && nr7[i] <= 'Z')) {
+					x += nr7[i];	
+					} if (x.length === 10){
+						break;
+					}
+				}
+				return x;
+				
+			}
+
+			console.log(sapte(nr7));
 
 			
 
@@ -100,10 +135,34 @@
 
 
 			 console.log("=====2.10======");
+
+			 var sir1="Ana";
+			 var sir2="Maria";
+			 var sir3="Andreea";
+
+			 function zece() {
+			 	var rez=sir1.concat(sir2,sir3);
+			 		return rez;
+			 		 }
+			 console.log(zece());
+
+
 			 console.log("=====2.11======");
+
+			 var sir1="Ana";
+			 var sir2="Maria";
+			 var sir3="Andreea";
+			 var sir4=","
+
+			 function unsprezece() {
+			 	var rez= sir1+sir4+sir2+sir4+sir3;
+			 		return rez;
+			 		 }
+			 console.log(unsprezece());
 
 
 			 console.log("=====2.12======");
+
 
 			 function doisprezece(n) {
 				var rezultat;
@@ -149,20 +208,22 @@
 
 			console.log("=====2.15======");
 
-			function cincisprezece(n) {
+			var nr15 = 64;
+
+			function cincisprezece() {
   				 var arr = [];
-  				  	if (typeof n !== 'number')
+  				  	if (typeof nr15 !== 'number')
   				 		 return false;
-  				 	if (n === 0)
+  				 	if (nr15 === 0)
   				 		return +Infinity;
-  					 for (var mod=1; mod<=n; mod++)
-  				 		if (n % mod === 0) {
-  				 			arr.push(mod);
+  					 for (var i=2; i<nr15; i++)
+  				 		if (nr15 % i === 0) {
+  				 			arr.push(i);
   				 	}	
   				 return	arr; 
 		}
 
-			console.log(cincisprezece(25));
+			console.log(cincisprezece(nr15));
 
 			console.log("=====2.16======");
 			console.log("=====2.17======");
@@ -181,9 +242,35 @@
 
 
 			console.log("=====2.19======");
+
+			var nr19= 'ABC';
+
+			function nouasprezece () {
+				var numere= '';
+				for(var i=0; i<nr19.length; i++){
+					numere= numere + nr19[nr19.length-i-1]
+					}		
+				
+				return numere;	
+			}
+
+			console.log(nouasprezece(nr19));
+
+
 			console.log("=====2.20======");
 
+			var nr20= '123321';
 
+			function douazeci () {
+				for(var i=0; i<nr20.length/2; i++){
+					if (nr20[i] !== nr20[nr20.length-i-1]){
+						return 'Numarul nu este palindrom';
+					}		
+				}
+				return 'Numarul este palindrom';	
+			}
+
+			console.log(douazeci(nr20));
 
 		</script>
 	</head>
